@@ -1,0 +1,57 @@
+/* Định dạng chung cho toàn bộ trang */
+body {
+  font-family: Arial, sans-serif; /* Phông chữ cho trang */
+  margin: 0; /* Bỏ lề mặc định */
+  padding: 0; /* Bỏ padding mặc định */
+  background-color: #f4f4f4; /* Màu nền của trang */
+}
+
+/* Định dạng cho thanh điều hướng */
+.tab {
+  display: flex; /* Sử dụng flexbox để sắp xếp các liên kết */
+  justify-content: center; /* Căn giữa các liên kết */
+  background-color: #333; /* Màu nền của thanh điều hướng */
+}
+
+/* Định dạng cho các liên kết trong thanh điều hướng */
+.tab a {
+  color: white; /* Màu chữ */
+  padding: 14px 20px; /* Khoảng cách xung quanh chữ */
+  text-decoration: none; /* Bỏ gạch dưới */
+  text-align: center; /* Canh giữa chữ */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+/* Hiệu ứng hover khi di chuột qua các liên kết */
+.tab a:hover {
+  background-color: #ddd; /* Màu nền khi hover */
+  color: black; /* Màu chữ khi hover */
+}
+
+/* Định dạng cho liên kết đang hoạt động (active) */
+.tab a.active {
+  background-color: #4caf50; /* Màu nền cho liên kết đang hoạt động */
+  color: white; /* Màu chữ cho liên kết đang hoạt động */
+  font-weight: bold; /* Làm chữ đậm cho liên kết đang hoạt động */
+}
+
+/* Định dạng cho tiêu đề và nội dung */
+h1 {
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-top: 20px; /* Khoảng cách trên */
+}
+
+h2 {
+  text-align: center; /* Căn giữa tiêu đề phụ */
+  margin-top: 20px; /* Khoảng cách trên */
+}
+
+/* Định dạng cho nội dung chính */
+div {
+  text-align: center; /* Căn giữa nội dung */
+  padding: 20px; /* Khoảng cách xung quanh nội dung */
+  background-color: white; /* Màu nền cho nội dung */
+  margin: 20px; /* Khoảng cách xung quanh nội dung */
+  border-radius: 8px; /* Bo tròn các góc */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+}

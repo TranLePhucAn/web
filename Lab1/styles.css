@@ -1,0 +1,170 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #f4f7f9;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for page content */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px; /* To avoid overlap with fixed menu */
+  transition: all 0.3s ease;
+}
+
+/* Fixed menu styling */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #007bff;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background-color: #0056b3;
+}
+
+/* Page content styling */
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #007bff;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Styling for unordered lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button styling */
+button {
+  padding: 12px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+}

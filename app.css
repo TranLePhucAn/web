@@ -1,0 +1,112 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/09/15/10/sky-1246311_1280.jpg");
+  background-size: cover;
+  color: #444;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.tab a:hover {
+  background-color: #004d40;
+  transform: scale(1.1);
+}
+
+.tab a.active {
+  background-color: #009688;
+  font-weight: bold;
+}
+
+.wrapper {
+  position: fixed; /* Giữ cho phần tử ở vị trí cố định */
+  top: 60px; /* Khoảng cách từ trên cùng của viewport */
+  left: 50%; /* Đặt phần tử ở giữa theo chiều ngang */
+  transform: translateX(-50%); /* Điều chỉnh vị trí để chính giữa */
+  width: 80%; /* Độ rộng của phần tử (giảm còn 80%) */
+  max-width: 300px; /* Giới hạn độ rộng tối đa (giảm còn 300px) */
+  padding: 20px; /* Padding trong phần tử */
+  background: white; /* Màu nền */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để tạo chiều sâu */
+  border-radius: 8px; /* Bo tròn các góc */
+  display: flex; /* Kích hoạt flexbox layout */
+  justify-content: space-between; /* Không gian giữa các phần tử flex */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  z-index: 100; /* Thứ tự xếp chồng */
+}
+
+.form-formgroup {
+  margin: 10px 0;
+}
+
+.forminput {
+  padding: 10px;
+  width: 220px;
+  border: 2px solid #00796b;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.forminput:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.question {
+  margin: 10px 0;
+  background-color: #b2dfdb;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+h1,
+h2,
+h3 {
+  color: #00796b;
+}

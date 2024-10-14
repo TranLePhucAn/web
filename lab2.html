@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Bài tập lab2</title>
+    <link rel="stylesheet" href="..//phancss/styles.css">
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <a href="index.html" class="home-link">Home</a>
+        <a href="about.html" class="about-link">About</a>
+        <a href="lab.html" class="labs-link">Tabs</a>
+      </div>
+      <div class="content">
+        <h2>Tabs</h2>
+        <div class="labs-container">
+          <a href="Lab1.html">Lab1</a>
+          <a href="Lab2.html">Lab2</a>
+          <a href="Lab3.html">Lab3</a>
+        </div>
+      <div id="wrapper">
+        <form id="form-login">
+          <h1 class="form-heading">Form Đăng Nhập</h1>
+          <div class="form-formgroup">
+            <input
+              type="text"
+              id="username"
+              class="forminput"
+              placeholder="Tên đăng nhập"
+            />
+          </div>
+          <div class="form-formgroup">
+            <input
+              type="password"
+              id="password"
+              class="forminput"
+              placeholder="Mật khẩu"
+            />
+          </div>
+          <button type="button" class="form submit" onclick="login()">
+            Đăng Nhập
+          </button>
+        </form>
+
+        <div id="home-tab" class="tab-content">
+          <h2>Chọn Bài Tập</h2>
+          <div class="exercises">
+            <button onclick="startExercise(1)">Đề 1</button>
+            <button onclick="startExercise(2)">Đề 2</button>
+            <button onclick="startExercise(3)">Đề 3</button>
+          </div>
+          <div id="questions-section" style="display: none">
+            <h3>Bài <span id="exercise-number"></span></h3>
+            <div id="questions-list"></div>
+            <button onclick="submitAnswers()">Nộp Bài</button>
+            <div id="result"></div>
+          </div>
+        </div>
+      </div>
+
+      <script src="..//phanjavascript/lab2.js"></script>
+    </div>
+  </body>
+</html>

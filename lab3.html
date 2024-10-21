@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chia sẻ tài liệu học tập-lab3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lab3.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="menu">
+          <a href="index.html" class="home-link">Home</a>
+          <a href="about.html" class="about-link">About</a>
+          <a href="labs.html" class="labs-link">Tabs</a>
+        </div>
+        <div class="content">
+          <h2>Tabs</h2>
+          <div class="labs-container">
+            <a href="Lab1.html">Lab1</a>
+            <a href="Lab2.html">Lab2</a>
+            <a href="Lab3.html">Lab3</a>
+          </div>
+          <script src="lab3.js"></script>
+          <h1>Chia Sẻ Tài Liệu Học Tập</h1>
+      
+          <div class="subjects-container">
+            <div class="subject" onclick="toggleContent('toan-content')">
+              <h2>Môn Toán</h2>
+            </div>
+      
+            <div class="subject" onclick="toggleContent('vatly-content')">
+              <h2>Môn Vật Lý</h2>
+            </div>
+      
+            <div class="subject" onclick="toggleContent('hoahoc-content')">
+              <h2>Môn Hóa Học</h2>
+            </div>
+          </div>
+      
+          <div id="toan-content" class="hidden-content">
+            <div class="toggle-section">
+              <h3>Bài Giảng</h3>
+              <p>
+                <a href="link_bai_giang_toan.pdf" target="_blank"
+                  >Bài giảng Toán cơ bản</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Bài Tập</h3>
+              <p>
+                <a href="link_bai_tap_toan.pdf" target="_blank"
+                  >Bài tập Toán số học</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Tài Liệu Tham Khảo</h3>
+              <p>
+                <a href="link_tai_lieu_toan.pdf" target="_blank"
+                  >Tài liệu tham khảo Toán nâng cao</a
+                >
+              </p>
+            </div>
+          </div>
+      
+          <div id="vatly-content" class="hidden-content">
+            <div class="toggle-section">
+              <h3>Bài Giảng</h3>
+              <p>
+                <a href="link_bai_giang_vat_ly.pdf" target="_blank"
+                  >Bài giảng Vật lý đại cương</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Bài Tập</h3>
+              <p>
+                <a href="link_bai_tap_vat_ly.pdf" target="_blank"
+                  >Bài tập Vật lý cơ học</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Tài Liệu Tham Khảo</h3>
+              <p>
+                <a href="link_tai_lieu_vat_ly.pdf" target="_blank"
+                  >Tài liệu tham khảo Vật lý nâng cao</a
+                >
+              </p>
+            </div>
+          </div>
+      
+          <div id="hoahoc-content" class="hidden-content">
+            <div class="toggle-section">
+              <h3>Bài Giảng</h3>
+              <p>
+                <a href="link_bai_giang_hoa_hoc.pdf" target="_blank"
+                  >Bài giảng Hóa học đại cương</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Bài Tập</h3>
+              <p>
+                <a href="link_bai_tap_hoa_hoc.pdf" target="_blank"
+                  >Bài tập Hóa học hữu cơ</a
+                >
+              </p>
+            </div>
+            <div class="toggle-section">
+              <h3>Tài Liệu Tham Khảo</h3>
+              <p>
+                <a href="link_tai_lieu_hoa_hoc.pdf" target="_blank"
+                  >Tài liệu tham khảo Hóa học nâng cao</a
+                >
+              </p>
+            </div>
+          </div>
+        </body>
+      </html>
+      
+  </body>
+</html>

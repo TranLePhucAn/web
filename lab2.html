@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Bài tập lab2</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <a href="index.html" class="home-link">Home</a>
+        <a href="about.html" class="about-link">About</a>
+        <a href="lab.html" class="labs-link">Tabs</a>
+      </div>
+      <div class="content">
+        <h2>Tabs</h2>
+        <div class="labs-container">
+          <a href="Lab1.html">Lab1</a>
+          <a href="Lab2.html">Lab2</a>
+          <a href="Lab3.html">Lab3</a>
+        </div>
+      <div id="wrapper">
+        <form onsubmit="handleLogin(event)">
+          <h1>Login</h1>
+          <div class="inputbox">
+            <input
+              type="text"
+              id="email"
+              required
+              placeholder="Tên người dùng hoặc Email"
+            />
+          </div>
+          <div class="inputbox">
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Mật khẩu"
+            />
+          </div>
+          <div class="forgot">
+            <label for=""><input type="checkbox" />Nhớ tài khoản</label>
+            <a href="#">Quên mật khẩu</a>
+          </div>
+          <button type="submit">Đăng nhập</button>
+        </form>
+      </section>
+
+      <script>
+        function handleLogin(event) {
+          event.preventDefault();
+          window.location.href = "themlab2.html";
+        }
+      </script>
+    </div>
+  </body>
+</html>

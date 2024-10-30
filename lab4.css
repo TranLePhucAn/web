@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container for layout */
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Header Section */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr auto auto;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #0073b1;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header button {
+  padding: 8px 16px;
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header .dots {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Layout Section */
+.split-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Left Column: Video Section */
+.left-column {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-section {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-section iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Right Column: Video List */
+.right-column {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-list h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.video-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.video-list li {
+  margin-bottom: 10px;
+}
+
+.video-list a {
+  color: #0073b1;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.video-list a:hover {
+  text-decoration: underline;
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs a,
+.tabs button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tabs a {
+  background-color: white;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.tabs button {
+  background-color: #0073b1;
+  color: white;
+  border: none;
+}
+
+.tabs button:last-child {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Video Info Section */
+.video-info h2 {
+  font-size: 18px;
+  margin-top: 0;
+  color: #333;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.rating span {
+  color: #f4a941;
+}
+
+.rating p {
+  margin-left: 10px;
+  color: #666;
+}
+
+.updated {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.description ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.description ul li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}

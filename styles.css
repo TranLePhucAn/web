@@ -1,0 +1,170 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+  font-size: 18px; /* Increased font size */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for page content */
+.container {
+  width: 90%; /* Increased width */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px; /* Increased padding */
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  margin-top: 100px; /* To avoid overlap with fixed menu */
+  transition: all 0.3s ease;
+}
+
+/* Fixed menu styling */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #388e3c; /* Green background */
+  padding: 15px;
+  border-radius: 0 0 12px 12px; /* More rounded corners */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px; /* Increased padding */
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border-radius: 6px; /* More rounded corners */
+}
+
+.menu a:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+}
+
+/* Page content styling */
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 32px; /* Increased font size */
+  color: #388e3c; /* Green heading */
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Styling for unordered lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background-color: #f1f8e9; /* Very light green */
+  padding: 12px; /* Increased padding */
+  margin-bottom: 12px; /* Increased margin */
+  border-left: 6px solid #388e3c; /* Thicker left border */
+  border-radius: 6px; /* More rounded corners */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Increased gap */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 6px; /* Increased margin */
+  display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border-radius: 6px; /* More rounded corners */
+  border: 1px solid #ccc;
+  margin-top: 6px; /* Increased margin */
+  background-color: #f9fbe7; /* Light background for input */
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #388e3c; /* Dark green on focus */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button styling */
+button {
+  padding: 14px 18px; /* Increased padding */
+  background-color: #388e3c; /* Green button */
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+}
+
+button.delete-btn {
+  background-color: #e53935; /* Red button */
+}
+
+button.delete-btn:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px; /* Increased gap */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+}

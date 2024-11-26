@@ -34,6 +34,7 @@ body {
 .menu {
   display: flex;
   justify-content: space-around;
+  position: sticky;
   background-color: #388e3c; /* Green background */
   padding: 15px;
   border-radius: 0 0 12px 12px; /* More rounded corners */
@@ -42,6 +43,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
+  padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -61,6 +63,7 @@ body {
 /* Page content styling */
 .content {
   padding: 20px;
+  margin-top: 60px;
 }
 
 .content h2 {

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Goals</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/rep7.css">
+<link rel="stylesheet" href="css/rep56.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <a href="index.html" class="home-link">Home</a>
+        <a href="about.html" class="about-link">About</a>
+        <a href="lab.html" class="labs-link">Lab</a>
+      </div>
+      <div class="content">
+        <h2>Lab</h2>
+        <div class="labs-container">
+          <a href="lab1.html">Lab1</a>
+          <a href="lab2.html">Lab2</a>
+          <a href="lab3.html">Lab3</a>
+          <a href="lab4.html">Lab4</a>
+          <a href="lab5.html">Lab5</a>
+          <a href="rep56.html">Lab6</a>
+          <li class="dropdown">
+            <a href="#" id="lab6-toggle">
+              <span>Lab6</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul id="lab6-dropdown" style="display: none;">
+              <li><a href="rep56.html">Rep 5_6</a></li>
+              <li><a href="rep7.html">Rep 7</a></li>
+              <li><a href="rep8.html">Rep 8</a></li>
+            </ul>
+          </li>
+    <div class="container">
+      <!-- Cột bên trái -->
+      <div class="left-column">
+        <div class="title">Learning focused on your goals</div>
+
+        <div class="goal" onclick="showGoalDetails('Hands-on training')">
+          <div class="goal-icon">🌟</div>
+          <div class="goal-content">
+            <h3>Hands-on training</h3>
+            <p>
+              Upskill effectively with AI-powered coding exercises, practice
+              tests, and quizzes.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal" onclick="showGoalDetails('Certification prep')">
+          <div class="goal-icon">📜</div>
+          <div class="goal-content">
+            <h3>Certification prep</h3>
+            <p>
+              Prep for industry-recognized certifications by solving real-world
+              challenges and earning badges.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal" onclick="showGoalDetails('Insights and analytics')">
+          <div class="goal-icon">📊</div>
+          <div class="goal-content">
+            <h3>
+              Insights and analytics
+              <span class="enterprise-badge">Enterprise Plan</span>
+            </h3>
+            <p>
+              Fast-track goals with advanced insights plus a dedicated customer
+              success team.
+            </p>
+            <a href="#" class="goal-link">Find out more →</a>
+          </div>
+        </div>
+
+        <div class="goal" onclick="showGoalDetails('Customizable content')">
+          <div class="goal-icon">⚙️</div>
+          <div class="goal-content">
+            <h3>
+              Customizable content
+              <span class="enterprise-badge">Enterprise Plan</span>
+            </h3>
+            <p>Create tailored learning paths for teams and organizations.</p>
+            <a href="#" class="goal-link">Find out more →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột bên phải -->
+      <div class="right-column">
+        <div class="score-title">
+          Your score: <span class="score">159</span>
+        </div>
+        <h2>Biểu Đồ</h2>
+        <canvas id="lineChart"></canvas>
+        <div class="score-details">
+          Your performance was better than 88% of users who have completed this
+          assessment.
+        </div>
+
+        <div class="answers-section">
+          <div class="question correct">
+            <strong>Question 1</strong> - Correct<br />
+            Which of the following scenarios would benefit most from a managed
+            Kubernetes service?
+          </div>
+          <div class="question correct">
+            <strong>Question 2</strong> - Correct<br />
+            You containerized a web application. Which of the following
+            strategies is best to persist the data?
+          </div>
+          <div class="question incorrect">
+            <strong>Question 3</strong> - Incorrect<br />
+            What is the primary purpose of a CI/CD pipeline?
+          </div>
+          <!-- Thêm các câu hỏi khác nếu cần -->
+        </div>
+      </div>
+    </div>
+    <script src="script/rep56.js"></script>
+    <script src="script/rep7.js"></script>
+  </body>
+</html>

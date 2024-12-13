@@ -1,173 +1,472 @@
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* overflow-x: hidden; */
+}
+:root {
+  --background-color-dark-blue: #003366;
+  --background-color-light-blue: #5ab9ea;
+  --background-color-pale-blue: #00bfff;
+  --background-color-white: white;
+  --text-color-dark: #333;
+  --text-color-light: #666;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*-----chuyển trang-------*/
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-out {
+  animation: fadeOut 0.5s forwards;
 }
 
-/* Body styling */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 body {
-  background-color: #e8f5e9; /* Light green background */
-  color: #2e7d32; /* Dark green text */
-  font-size: 18px; /* Increased font size */
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Container for page content */
-.container {
-  width: 90%; /* Increased width */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px; /* Increased padding */
-  background-color: #ffffff; /* White background */
-  border-radius: 12px; /* More rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-  margin-top: 100px; /* To avoid overlap with fixed menu */
-  transition: all 0.3s ease;
-}
-
-/* Fixed menu styling */
-.menu {
-  display: flex;
-  justify-content: space-around;
-  position: sticky;
-  background-color: #388e3c; /* Green background */
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 15px;
-  border-radius: 0 0 12px 12px; /* More rounded corners */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 24px; /* Increased padding */
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  border-radius: 6px; /* More rounded corners */
-}
-
-.menu a:hover {
-  background-color: #2e7d32; /* Darker green on hover */
-}
-
-/* Page content styling */
-.content {
-  padding: 20px;
-  margin-top: 60px;
-}
-
-.content h2 {
-  margin-bottom: 20px;
-  font-size: 32px; /* Increased font size */
-  color: #388e3c; /* Green heading */
-}
-
-p {
-  margin-bottom: 15px;
-  line-height: 1.8;
-}
-
-/* Styling for unordered lists */
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  background-color: #f1f8e9; /* Very light green */
-  padding: 12px; /* Increased padding */
-  margin-bottom: 12px; /* Increased margin */
-  border-left: 6px solid #388e3c; /* Thicker left border */
-  border-radius: 6px; /* More rounded corners */
-}
-
-/* Form styling */
-form {
+header {
   display: flex;
-  flex-direction: column;
-  gap: 24px; /* Increased gap */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #254b44;
+  color: var(--background-color-white);
+  padding: 20px;
 }
 
-.form-group {
+.logo {
+  padding-left: 50px; /* Nhích vào trong từ mép bên trái của nội dung */
+}
+.logo a {
+  text-decoration: none; /* Loại bỏ gạch chân liên kết */
+  color: #fafbfb; /* Màu chữ */
+}
+
+.logo a:hover {
+  color: #93ef0a; /* Hiệu ứng khi di chuột vào logo */
+}
+
+.logo h1 {
+  font-size: 3rem; /* Cỡ chữ */
+  font-family: Arial, sans-serif; /* Font chữ */
+  margin: 0; /* Xóa khoảng cách mặc định */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d05808c3;
+}
+
+.project-button .btn {
+  background-color: var(--background-color-light-blue);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  /* transition: background-color 0.3s ease; */
+  margin-right: 20px;
+}
+
+.project-button .btn:hover {
+  background-color: var(--background-color-pale-blue);
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--background-color-dark-blue);
+}
+
+iframe {
+  width: 100%;
+  height: 65rem; /* Chiều cao tối đa là 65rem */
+  border: none; /* Xóa viền của iframe */
+  overflow: hidden;
+  /* stroke-linecap:  ; */
+}
+
+.hero h2 {
+  font-size: 2.5em !important;
+  margin-bottom: 10px;
+}
+
+.hero h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+.slide {
+  /* Ngăn không cho phần tử thu nhỏ */
+  flex-shrink: 0;
+  width: 100%; /* Đảm bảo mỗi slide chiếm toàn bộ chiều rộng */
+}
+.slide img {
+  width: 100%;
+  height: 60vh; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  display: flex;
+  gap: 0; /* Loại bỏ khoảng cách giữa các phần tử */
+}
+.buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.prev,
+.next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* Xóa khoảng trắng thừa cho body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-container {
+    height: 100%;
+  }
+  .slide img {
+    height: 100%;
+  }
+} /*-----------about-----------*/
+/* Container About Me */
+.about-content {
+  max-width: 800px; /* Giới hạn chiều rộng */
+  margin: 0 auto; /* Canh giữa toàn bộ phần about */
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Nền nhẹ */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.about-content h2 {
+  text-align: center; /* Canh giữa tiêu đề */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Đoạn văn */
+.about-content p {
+  color: #444;
   margin-bottom: 15px;
 }
 
-label {
+/* Danh sách */
+.about-content li {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Hình ảnh */
+.about-content img {
+  display: block;
+  margin: 0 auto 20px 0; /* Căn hình giữa nhưng lề trái */
+  float: left; /* Đẩy hình sang trái */
+  margin-right: 20px; /* Tạo khoảng cách giữa hình và văn bản */
+  border-radius: 5px; /* Bo góc hình ảnh */
+  max-width: 100%; /* Đảm bảo ảnh không tràn khung */
+  height: auto;
+}
+
+/* Văn bản giới thiệu chung */
+.about-content p strong {
+  color: #007bff; /* Làm nổi bật phần tên */
   font-weight: bold;
-  margin-bottom: 6px; /* Increased margin */
+}
+/*-------lab------------*/
+/* Định dạng menu chính */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Định dạng cho các liên kết trong menu */
+nav ul li a {
+  text-decoration: none;
+  color: #007bff; /* Màu chữ của các liên kết */
+  font-weight: bold;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+/* Định dạng cho mục Labs (có dropdown) */
+.labs-menu {
+  position: relative; /* Cần thiết để menu con có thể được định vị chính xác */
+}
+
+/* Ẩn danh sách lab con ban đầu */
+.labs-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Đặt vị trí ngay dưới mục Labs */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100; /* Đảm bảo menu con nằm trên các phần tử khác */
+}
+
+/* Hiển thị menu con khi hover vào Labs */
+.labs-menu:hover .labs-dropdown {
   display: block;
 }
 
-input[type="text"],
-textarea,
-select {
+/* Định dạng cho các liên kết trong menu dropdown */
+.labs-dropdown li {
+  padding: 10px 20px;
+}
+
+/* Định dạng cho các liên kết trong menu dropdown */
+.labs-dropdown li a {
+  color: #333;
+  text-decoration: none;
+  display: block; /* Đảm bảo mỗi liên kết chiếm cả dòng */
+  padding: 8px 20px; /* Thêm padding để dễ nhấn */
+}
+
+/* Thêm hiệu ứng hover cho các liên kết trong menu dropdown */
+.labs-dropdown li a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Định dạng chung cho main content */
+.content {
+  display: flex;
+  justify-content: center; /* Canh giữa nội dung theo chiều ngang */
+  align-items: flex-start; /* Canh phần tử lên phía trên */
+  min-height: 10px; /* Chiều cao tối thiểu 50% viewport */
+  padding: 20px;
+}
+
+/* Container chứa các lab */
+.labs-container {
+  display: flex;
+  flex-wrap: wrap; /* Tự động xuống dòng nếu không đủ chỗ */
+  justify-content: center; /* Canh giữa các nút */
+  gap: 15px; /* Khoảng cách giữa các nút */
+}
+
+/* Các nút lab */
+.labs-container a {
+  display: inline-block;
+  text-decoration: none; /* Bỏ gạch chân */
+  background-color: #446f2b; /* Màu nền xanh */
+  color: #fff; /* Màu chữ trắng */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  border-radius: 25px; /* Bo góc tròn */
+  font-size: 16px; /* Cỡ chữ */
+  font-weight: bold; /* Chữ đậm */
+  text-align: center; /* Canh giữa chữ */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+  transition: all 0.3s ease; /* Hiệu ứng hover mượt mà */
+}
+
+/* Hiệu ứng hover cho nút */
+.labs-container a:hover {
+  background-color: #0056b3; /* Màu nền đậm hơn khi hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng đậm hơn */
+  transform: translateY(-3px); /* Nút nhích lên */
+}
+
+/* Hiệu ứng khi nhấn */
+.labs-container a:active {
+  background-color: #004494; /* Màu nền khi nhấn */
+  transform: translateY(1px); /* Nút hạ xuống */
+}
+/*-----------------*/
+html,
+body {
+  height: 100%; /* Đảm bảo chiều cao của trang là 100% */
+  margin: 0; /* Loại bỏ margin mặc định */
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+}
+.content {
+  flex: 1; /* Chiếm toàn bộ không gian còn lại */
+}
+/* Footer Styles */
+footer {
+  background-color: #85aea6c3;
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Đẩy footer xuống dưới cùng */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  padding: 14px; /* Increased padding */
-  border-radius: 6px; /* More rounded corners */
-  border: 1px solid #ccc;
-  margin-top: 6px; /* Increased margin */
-  background-color: #f9fbe7; /* Light background for input */
-  transition: border 0.3s ease;
+  max-width: 1200px;
 }
 
-input[type="text"]:focus,
-textarea:focus,
-select:focus {
-  border-color: #388e3c; /* Dark green on focus */
+.footer-group-info,
+.footer-links,
+.footer-members,
+.footer-newsletter {
+  flex: 1;
+  margin: 0 20px;
 }
 
-textarea {
-  resize: vertical;
+.footer-group-info h3,
+.footer-links h4,
+.footer-members h4,
+.footer-newsletter h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-/* Button styling */
-button {
-  padding: 14px 18px; /* Increased padding */
-  background-color: #388e3c; /* Green button */
+.footer-group-info p {
+  white-space: nowrap; /* Ngăn không cho văn bản xuống dòng */
+  margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-members ul {
+  list-style: none;
+}
+
+.footer-links ul li a,
+.footer-members ul li a {
+  color: #254b44;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover,
+.footer-members ul li a:hover {
+  color: var(--background-color-white);
+}
+
+.footer-newsletter form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
   border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px; /* More rounded corners */
+  width: 200px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #00b33c;
+  color: var(--background-color-white);
+  border-radius: 0 20px 20px 0;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #2e7d32; /* Darker green on hover */
+.footer-newsletter button:hover {
+  background-color: var(--background-color-light-blue);
+}
+footer .footer-feedback button {
+  padding: 10px 20px;
+  border-radius: 50px; /* Làm cho button tròn */
+  background-color: #00b33c; /* Màu nền của button */
+  color: white; /* Màu chữ */
+  border: none; /* Xóa viền mặc định */
+  cursor: pointer; /* Hiển thị con trỏ chuột dạng tay */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
 }
 
-button.delete-btn {
-  background-color: #e53935; /* Red button */
+footer .footer-feedback button:hover {
+  background-color: var(--background-color-light-blue); /* Màu nền khi hover */
 }
 
-button.delete-btn:hover {
-  background-color: #c62828; /* Darker red on hover */
-}
-
-.form-actions {
-  display: flex;
-  justify-content: flex-start;
-  gap: 12px; /* Increased gap */
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
+@media screen and (max-width: 720px) {
+  body {
+    display: block;
   }
-
-  .menu {
-    flex-direction: column;
-    text-align: center;
+  header {
+    margin-top: 2px;
+    white-space: 4px;
+    display: block;
+    width: 100%;
+  }
+  .content-section {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .project-button {
+    margin-top: 8px;
+  }
+  nav {
+    list-style: none;
+    display: block;
+  }
+  nav ul {
+    display: block;
+    align-items: center;
+    margin-top: 2px;
+  }
+  footer {
+    display: block;
+    width: 100%;
+  }
+  .footer-container {
+    display: block;
   }
 }

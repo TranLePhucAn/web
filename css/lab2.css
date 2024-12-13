@@ -1,0 +1,246 @@
+#wrapper {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px; /* Giới hạn chiều rộng của form đăng nhập */
+  text-align: center;
+}
+
+form h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.inputbox {
+  margin-bottom: 20px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.inputbox input:focus {
+  border-color: #3498db;
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s;
+}
+
+.forgot a:hover {
+  color: #2980b9;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+/* Cấu trúc chung cho phần bài tập */
+#dashboardScreen {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+#dashboardScreen h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#dashboardScreen h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Phần lọc và tìm kiếm bài tập */
+.filter-section {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-section label {
+  font-size: 16px;
+  color: #333;
+}
+
+.filter-section select,
+.filter-section input {
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-section select {
+  width: 200px;
+}
+
+.filter-section input {
+  width: 250px;
+}
+
+/* Thiết kế cho các nút bài tập */
+.exercises button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.exercises button:hover {
+  background-color: #2980b9;
+}
+
+/* Phần hiển thị câu hỏi */
+#questions-section {
+  margin-top: 30px;
+  display: none;
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#questions-section h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.question input[type="radio"] {
+  margin-right: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Nút nộp bài */
+#questions-section button {
+  padding: 12px 25px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#questions-section button:hover {
+  background-color: #2ecc71;
+}
+
+/* Cấu trúc phần câu hỏi */
+#questions-section {
+  margin-top: 30px;
+  display: none;
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cấu trúc lưới cho câu hỏi */
+#questions-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia đều 2 cột */
+  gap: 30px; /* Khoảng cách giữa các câu hỏi */
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.question input[type="radio"] {
+  margin-right: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Nút nộp bài */
+#questions-section button {
+  padding: 12px 25px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#questions-section button:hover {
+  background-color: #2ecc71;
+}

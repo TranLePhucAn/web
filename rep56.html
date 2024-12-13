@@ -8,33 +8,43 @@
     <link rel="stylesheet" href="css/rep56.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="menu">
-        <a href="index.html" class="home-link">Home</a>
-        <a href="about.html" class="about-link">About</a>
-        <a href="lab.html" class="labs-link">Lab</a>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <h1>AN</h1>
+        </a>
       </div>
-      <div class="content">
-        <h2>Lab</h2>
-        <div class="labs-container">
-          <a href="lab1.html">Lab1</a>
-          <a href="lab2.html">Lab2</a>
-          <a href="lab3.html">Lab3</a>
-          <a href="lab4.html">Lab4</a>
-          <a href="lab5.html">Lab5</a>
-          <a href="rep56.html">Lab6</a>
-          <li class="dropdown">
-            <a href="#" id="lab6-toggle">
-              <span>Repo</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i>
-            </a>
-            <ul id="lab6-dropdown" style="display: none;">
-              <li><a href="rep56.html">Rep 5_6</a></li>
-              <li><a href="rep7.html">Rep 7</a></li>
-              <li><a href="rep8.html">Rep 8</a></li>
-            </ul>
-          </li>
-          
+
+    <div class="project-button">
+      <nav>
+        <ul>
+          <li><a class="text-primary" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="lab1.html">   </a></li>
+        </ul>
+        <main class="content">
+          <div class="labs-container">
+            <a href="lab1.html">Lab1</a>
+            <a href="lab2.html">Lab2</a>
+            <a href="lab3.html">Lab3</a>
+            <a href="lab4.html">Lab4</a>
+            <a href="lab5.html">Lab5</a>
+            <a href="rep56.html">Lab6</a>
+          </div>
+      </nav>
+    </div>
+  </header>
+  <li class="dropdown">
+    <a href="#" id="lab6-toggle">
+      <span>Repo</span>
+      <i class="bi bi-chevron-down toggle-dropdown"></i>
+    </a>
+    <ul id="lab6-dropdown" style="display: none;">
+      <li><a href="rep56.html">Rep 5_6</a></li>
+      <li><a href="rep7.html">Rep 7</a></li>
+      <li><a href="rep8.html">Rep 8</a></li>
+    </ul>
+  </li> 
     <!-- Thanh điều hướng chủ đề -->
     <div class="header">
       <button class="active" onclick="showCourses('web')">
@@ -54,5 +64,45 @@
       <!-- Khóa học sẽ hiển thị ở đây -->
     </div>
     <script src="script/rep56.js"></script>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-group-info">
+          <h3>Web cá nhân</h3>
+          <p>
+            Nong Lam University - Ho Chi Minh City
+          </p>
+          <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li><a href="lab.html">Lab</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-members">
+          <h4>Our Members</h4>
+          <ul>
+            <li>
+              <a href="https://tranlephucan.github.io/web/">Trần Lê Phúc An</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <form>
+            <input type="email" placeholder="Email is here" required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
   </body>
 </html>

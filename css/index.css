@@ -1,0 +1,206 @@
+:root {
+  --primary-color: #254b44; /* Màu nền thanh menu và footer */
+  --text-color: #ffffff; /* Màu chữ trắng */
+  --highlight-color: #ffd700; /* Vàng ánh kim */
+  --secondary-bg: #e3fcec; /* Nền phụ xanh nhạt */
+  --link-hover-color: #ffd700; /* Màu hover link */
+  --footer-bg: #3e7066; /* Nền footer bổ sung */
+  --border-color: #a1b09d; /* Đường viền nhấn nhá */
+}
+
+/* --- Thanh menu --- */
+.navbar {
+  background-color: var(--primary-color); /* Nền thanh menu */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed; /* Cố định thanh menu */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Đảm bảo thanh menu luôn trên cùng */
+  box-shadow: 0 2px 5px rgba(232, 237, 225, 0.1); /* Tạo bóng nhẹ cho thanh menu */
+}
+
+.navbar a {
+  color: var(--text-color); /* Màu chữ trắng */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển màu và phóng to chữ */
+}
+
+.navbar a:hover {
+  color: var(--highlight-color); /* Màu vàng ánh kim khi hover */
+  transform: scale(1.1); /* Phóng to chữ khi hover */
+}
+
+.navbar a.active {
+  color: var(--secondary-bg); /* Màu xanh nhạt cho trạng thái active */
+}
+.navbar .navbar-brand {
+  position: fixed;
+  color: #f5f5f5; /* Màu logo sáng hơn */
+  font-weight: bold;
+  font-size: 18px;
+}
+/* Hiệu ứng cho các mục dropdown */
+.dropdown-menu {
+  left: 20px; /* Dời toàn bộ menu con vào trong */
+}
+
+.dropdown-menu {
+  display: none; /* Mặc định ẩn */
+  position: absolute;
+  top: 90%;
+  left: 0;
+  background-color: rgb(153, 236, 53);
+  border: 1px solid #ddd;
+  z-index: 1000;
+  padding: 0;
+  display: flex; /* Hiển thị theo hàng ngang */
+}
+
+.dropdown-item {
+  padding: 6px 8px;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dropdown-item:last-child {
+  border-right: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+
+.dropdown-menu.show {
+  display: flex; /* Hiển thị menu khi có class 'show' */
+}
+/* --- Breadcrumb --- */
+.breadcrumb {
+  background-color: var(--secondary-bg); /* Nền xanh nhạt cho breadcrumb */
+  margin-top: 35px; /* Khoảng cách từ thanh menu cố định */
+  font-size: 14px; /* Giảm kích thước chữ của breadcrumb */
+  padding: 10px 0; /* Giảm padding để làm phần breadcrumb nhỏ lại */
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: var(--primary-color); /* Màu chữ breadcrumb */
+  font-size: 14px; /* Kích thước chữ cho các mục trong breadcrumb */
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: var(--highlight-color); /* Màu nhấn cho mục hiện tại */
+}
+
+/* Cải thiện không gian cho breadcrumb */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* --- Hình Slide --- */
+.slide img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.about-content {
+  text-align: center; /* Căn giữa nội dung văn bản */
+  max-width: 800px; /* Đặt chiều rộng tối đa cho phần nội dung */
+  margin: 0 auto; /* Căn giữa toàn bộ phần tử về trục ngang */
+}
+
+.about-content img {
+  display: block; /* Đảm bảo hình ảnh được xem như khối */
+  margin: 20px auto; /* Căn giữa hình ảnh */
+  max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng khung */
+  height: auto; /* Đảm bảo tỷ lệ ảnh đúng */
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-content li {
+  list-style: none; /* Ẩn ký hiệu gạch đầu dòng */
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+/* --- Footer --- */
+footer {
+  background-color: var(--footer-bg); /* Nền footer */
+  color: var(--text-color); /* Màu chữ trắng trong footer */
+  padding: 20px 0;
+  text-align: center;
+  position: relative; /* Footer không cố định */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho footer */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-container h3,
+.footer-container h4 {
+  color: var(--highlight-color); /* Màu vàng ánh kim cho tiêu đề trong footer */
+}
+
+.footer-container a {
+  color: var(--text-color); /* Màu chữ liên kết trong footer */
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: var(--link-hover-color); /* Màu hover cho liên kết trong footer */
+}
+
+.footer-newsletter input {
+  width: calc(100% - 110px);
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.footer-newsletter button {
+  background-color: var(--highlight-color);
+  border: none;
+  padding: 5px 10px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background-color: var(
+    --link-hover-color
+  ); /* Màu hover cho nút submit trong footer */
+}
+
+/* --- Đường viền nhấn nhá --- */
+.navbar,
+footer {
+  border-bottom: 2px solid var(--border-color); /* Đường viền dưới thanh menu và footer */
+}
+
+/* --- Nội dung chính --- */
+.content {
+  margin-top: 120px; /* Khoảng cách từ thanh menu cố định */
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* Đảm bảo nội dung không bị đè lên footer */
+}

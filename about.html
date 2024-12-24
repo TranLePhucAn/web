@@ -1,51 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math Learning Platform</title>
+    <title>Trang Web Có Thanh Menu Cố Định</title>
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
-
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <h1>AN</h1>
-        </a>
-      </div>
-
-      <div class="project-button">
-        <nav>
-          <ul>
-            <li><a class="text-primary" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="lab1.html">   </a></li>
+    <!-- Thanh menu -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <div class="navbar-brand">LOGO</div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                Labs
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="lab1.html">Lab 1</a>
+                <a class="dropdown-item" href="lab2.html">Lab 2</a>
+                <a class="dropdown-item" href="lab3.html">Lab 3</a>
+                <a class="dropdown-item" href="lab4.html">Lab 4</a>
+                <a class="dropdown-item" href="lab5.html">Lab 5</a>
+                <a class="dropdown-item" href="rep56.html">Lab 6</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="result.html">Result</a>
+            </li>
           </ul>
-          <main class="content">
-            <div class="labs-container">
-              <a href="lab1.html">Lab1</a>
-              <a href="lab2.html">Lab2</a>
-              <a href="lab3.html">Lab3</a>
-              <a href="lab4.html">Lab4</a>
-              <a href="lab5.html">Lab5</a>
-              <a href="rep56.html">Lab6</a>
-            </div>
-      
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">About</a></li>
+            <li class="breadcrumb-item active" id="currentTab"></li>
+          </ol>
         </nav>
       </div>
-    </header>
+    </div>
+    <!---------->
     <div class="about-content">
-      <h2>About Me</h2>
       <p><strong>Họ tên:</strong> Trần Lê Phúc An</p>
+      <p><strong>Lớp:</strong> DH23DTA</p>
       <li>Đại học Nông Lâm khoa Công nghệ Thông tin k49</li>
       <p>GIỚI THIỆU CHUNG VỀ KHOA CÔNG NGHỆ THÔNG TIN:</p>
-      <img src="image/khoa.jpg " width="1000" height="800" />
+      <img src="img/khoa.jpg " width="1000" height="800" />
       <p>page của khoa:</p>
       <p>
         Tổng quan: · Thành lập năm 2001 theo giấy phép số: 2052/QĐ-BGD&ĐT-TCCB
@@ -54,10 +87,10 @@
         Mềm.
       </p>
     </div>
-
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
-        <div class="footer-group-info">
+        <div>
           <h3>Web cá nhân</h3>
           <p>
             Hồ Chí Minh Nông Lâm University<br />Thủ Đức City, Hồ Chí Minh City,
@@ -65,8 +98,7 @@
           </p>
           <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
         </div>
-
-        <div class="footer-links">
+        <div>
           <h4>Useful Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -74,8 +106,7 @@
             <li><a href="lab1.html">Lab</a></li>
           </ul>
         </div>
-
-        <div class="footer-members">
+        <div>
           <h4>Our Members</h4>
           <ul>
             <li>
@@ -83,8 +114,7 @@
             </li>
           </ul>
         </div>
-
-        <div class="footer-newsletter">
+        <div>
           <h4>Newsletter</h4>
           <form>
             <input type="email" placeholder="Email is here" required />
@@ -93,5 +123,9 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

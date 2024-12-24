@@ -6,6 +6,7 @@
   width: 100%;
   max-width: 400px; /* Giới hạn chiều rộng của form đăng nhập */
   text-align: center;
+  margin-left: 500px;
 }
 
 form h1 {
@@ -50,21 +51,6 @@ form h1 {
   color: #2980b9;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
 /* Cấu trúc chung cho phần bài tập */
 #dashboardScreen {
   width: 100%;

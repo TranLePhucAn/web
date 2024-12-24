@@ -1,272 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math Learning Platform</title>
+    <title>Trang Web Có Thanh Menu Cố Định</title>
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+ 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/lab5.css">
-    <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <h1>AN</h1>
-        </a>
-      </div>
-
-      <div class="project-button">
-        <nav>
-          <ul>
-            <li><a class="text-primary" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="lab1.html">   </a></li>
+    <!-- Thanh menu -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <div class="navbar-brand">LOGO</div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                Labs
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="lab1.html">Lab 1</a>
+                <a class="dropdown-item" href="lab2.html">Lab 2</a>
+                <a class="dropdown-item" href="lab3.html">Lab 3</a>
+                <a class="dropdown-item" href="lab4.html">Lab 4</a>
+                <a class="dropdown-item" href="lab5.html">Lab 5</a>
+                <a class="dropdown-item" href="rep56.html">Lab 6</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="result.html">Result</a>
+            </li>
           </ul>
-          <main class="content">
-            <div class="labs-container">
-              <a href="lab1.html">Lab1</a>
-              <a href="lab2.html">Lab2</a>
-              <a href="lab3.html">Lab3</a>
-              <a href="lab4.html">Lab4</a>
-              <a href="lab5.html">Lab5</a>
-              <a href="rep56.html">Lab6</a>
-            </div>
-      
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Labs</a></li>
+            <li class="breadcrumb-item active" id="currentTab">Lab5</li>
+          </ol>
         </nav>
       </div>
-    </header>
-      
-
+    </div>
     <div class="container">
-      <div class="header">My learning</div>
-      <div class="sub-header">
-        87hr 36min watched •
-        <a style="color: white; text-decoration: underline" href="#"
-          >View all activity</a
-        >
-      </div>
-
-      <div class="tabs">
-        <div onclick="showSection('all-courses')">All courses</div>
-        <div onclick="showSection('learning-paths')">Learning paths</div>
-        <div class="active" onclick="showSection('certifications')">
-          Certifications
+        <div class="header">My learning</div>
+        <div class="sub-header">
+          87hr 36min watched •
+          <a style="color: white; text-decoration: underline" href="#"
+            >View all activity</a
+          >
         </div>
-        <div onclick="showSection('archived')">Archived</div>
-        <div onclick="showSection('learning-tools')">Learning tools</div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- All Courses Section -->
-      <div id="all-courses" class="section">
-        <p>All courses content goes here.</p>
-      </div>
-
-      <!-- Learning Paths Section -->
-      <div id="learning-paths" class="section">
-        <p>Learning paths content goes here.</p>
-      </div>
-
-      <!-- Certifications Section -->
-      <div id="certifications" class="section active">
-        <div class="badge-section">
-          <hr />
-          <div class="badge-title">
-            <h3>My badges</h3>
-            <span>^</span>
+  
+        <div class="tabs">
+          <div onclick="showSection('all-courses')">All courses</div>
+          <div onclick="showSection('learning-paths')">Learning paths</div>
+          <div class="active" onclick="showSection('certifications')">
+            Certifications
+          </div>
+          <div onclick="showSection('archived')">Archived</div>
+          <div onclick="showSection('learning-tools')">Learning tools</div>
+        </div>
+  
+        <div class="divider"></div>
+  
+        <!-- All Courses Section -->
+        <div id="all-courses" class="section">
+          <p>All courses content goes here.</p>
+        </div>
+  
+        <!-- Learning Paths Section -->
+        <div id="learning-paths" class="section">
+          <p>Learning paths content goes here.</p>
+        </div>
+  
+        <!-- Certifications Section -->
+        <div id="certifications" class="section active">
+          <div class="badge-section">
+            <hr />
+            <div class="badge-title">
+              <h3>My badges</h3>
+              <span>^</span>
+            </div>
+            <div class="info">
+              <span
+                >You have earned and uploaded
+                <span class="badge-count">0 badges</span></span
+              >
+              <button class="button">Import new badge</button>
+            </div>
+            <p class="badge-description">
+              Currently, there are no badges uploaded to your profile. Begin your
+              journey towards your certification goals or
+              <a href="#">upload your third-party badges</a> to your profile and
+              impress your manager and peers with your accomplishments. Start
+              preparing for your next certificate today!
+            </p>
+            <hr />
+  
+            <div class="badge-divider"></div>
+          </div>
+  
+          <div class="section-header">
+            <h3>Certification preparation</h3>
           </div>
           <div class="info">
             <span
-              >You have earned and uploaded
-              <span class="badge-count">0 badges</span></span
+              >You are preparing for
+              <span class="badge-count">4 certifications</span> <i class="fas fa-info"></i></span
             >
-            <button class="button">Import new badge</button>
+            <div class="button-container">
+              <button class="button">Explore certification preparation</button>
+            </div>
           </div>
-          <p class="badge-description">
-            Currently, there are no badges uploaded to your profile. Begin your
-            journey towards your certification goals or
-            <a href="#">upload your third-party badges</a> to your profile and
-            impress your manager and peers with your accomplishments. Start
-            preparing for your next certificate today!
-          </p>
-          <hr />
-
-          <div class="badge-divider"></div>
-        </div>
-
-        <div class="section-header">
-          <h3>Certification preparation</h3>
-        </div>
-        <div class="info">
-          <span
-            >You are preparing for
-            <span class="badge-count">4 certifications</span> <i class="fas fa-info"></i></span
-          >
-          <div class="button-container">
-            <button class="button">Explore certification preparation</button>
+  
+          <div class="certification">
+            <div class="certification-cards">
+              <div class="certification-card">
+                <img
+                  src="img/Oracle_Associates_Badge.jpg"
+                  alt="Oracle Logo"
+                  width="80"
+                  height="80"
+                />
+                <div>
+                  <h4>Oracle Certified Associate, Java SE 8 Programmer</h4>
+                  <p>Oracle</p>
+                </div>
+              </div>
+              <div class="certification-card">
+                <img
+                  src="img/Brightest_CTFL.jpg"
+                  alt="ISTQB Logo"
+                  width="80"
+                  height="80"
+                />
+                <div>
+                  <h4>ISTQB® Certified Tester Foundation Level (CTFL)</h4>
+                  <p>Brightest</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="certification">
-          <div class="certification-cards">
-            <div class="certification-card">
+  
+        <!-- Combined Archived Section -->
+        <div id="archived" class="section">
+          <div class="course-list">
+            <!-- Course 1 -->
+            <div class="course-card">
+              <img src="img/csr.jpg" alt="CSR Course" />
+              <div class="menu-icon">⋮</div>
+              <div class="course-content">
+                <h3>FPT_Corporate Social Responsibility Training 2024</h3>
+                <div class="divider"></div>
+                <div class="progress-container">
+                  <div class="progress">100% complete</div>
+                  <div class="rating">
+                    <span>⭐⭐⭐⭐☆</span>
+                  </div>
+                </div>
+                <div class="rating-text">Your rating</div>
+              </div>
+            </div>
+  
+            <!-- Course 2 -->
+            <div class="course-card">
+              <img src="img/c2.jpg" alt="Another Course" />
+              <div class="menu-icon">⋮</div>
+              <div class="course-content">
+                <h3>FPT_Leadership Development Program 2024</h3>
+                <div class="divider"></div>
+                <div class="progress-container">
+                  <div class="progress">80% complete</div>
+                  <div class="rating">
+                    <span>⭐⭐⭐⭐☆</span>
+                  </div>
+                </div>
+                <div class="rating-text">Your rating</div>
+              </div>
+            </div>
+  
+            <!-- Course 3 -->
+            <div class="course-card">
               <img
-                src="image/Oracle_Associates_Badge.jpg"
-                alt="Oracle Logo"
-                width="80"
-                height="80"
+                src="https://fptsoftware.com/-/media/project/fpt-software/global/iba-award.png?modified=20240828041748/100x40"
+                alt="Another Course"
               />
-              <div>
-                <h4>Oracle Certified Associate, Java SE 8 Programmer</h4>
-                <p>Oracle</p>
-              </div>
-            </div>
-            <div class="certification-card">
-              <img
-                src="image/Brightest_CTFL.jpg"
-                alt="ISTQB Logo"
-                width="80"
-                height="80"
-              />
-              />
-              <div>
-                <h4>ISTQB® Certified Tester Foundation Level (CTFL)</h4>
-                <p>Brightest</p>
+              <div class="menu-icon">⋮</div>
+              <div class="course-content">
+                <h3>FPT_Software Engineering Basics 2024</h3>
+                <div class="divider"></div>
+                <div class="progress-container">
+                  <div class="progress">50% complete</div>
+                  <div class="rating">
+                    <span>⭐⭐⭐☆☆</span>
+                  </div>
+                </div>
+                <div class="rating-text">Your rating</div>
               </div>
             </div>
           </div>
         </div>
+  
+        <!-- Learning Tools Section -->
+        <div id="learning-tools" class="section">
+          <div class="learning-tools">
+            <h2>Learning tools</h2>
+            <p>
+              Explore a diverse range of courses and take advantage of these
+              versatile tools to gain knowledge, skills, and confidence at your
+              own pace.
+            </p>
+  
+            <div class="tool-cards">
+    <!-- Tool Card 1 -->
+    <div class="tool-card">
+      <i class="fa-regular fa-clock fa-3x"></i>
+      <div class="tool-content">
+        <h3>Learning reminders</h3>
+        <p>
+          Set time aside to learn and get reminders using your
+          scheduler.
+        </p>
+        <p>You currently have no ongoing reminders.</p>
+        <a href="#">See more</a>
       </div>
-
-      <!-- Combined Archived Section -->
-      <div id="archived" class="section">
-        <div class="course-list">
-          <!-- Course 1 -->
-          <div class="course-card">
-            <img src="image/csr.jpg" alt="CSR Course" />
-            <div class="menu-icon">⋮</div>
-            <div class="course-content">
-              <h3>FPT_Corporate Social Responsibility Training 2024</h3>
-              <div class="divider"></div>
-              <div class="progress-container">
-                <div class="progress">100% complete</div>
-                <div class="rating">
-                  <span>⭐⭐⭐⭐☆</span>
-                </div>
-              </div>
-              <div class="rating-text">Your rating</div>
-            </div>
-          </div>
-
-          <!-- Course 2 -->
-          <div class="course-card">
-            <img src="/image/c2.jpg" alt="Another Course" />
-            <div class="menu-icon">⋮</div>
-            <div class="course-content">
-              <h3>FPT_Leadership Development Program 2024</h3>
-              <div class="divider"></div>
-              <div class="progress-container">
-                <div class="progress">80% complete</div>
-                <div class="rating">
-                  <span>⭐⭐⭐⭐☆</span>
-                </div>
-              </div>
-              <div class="rating-text">Your rating</div>
-            </div>
-          </div>
-
-          <!-- Course 3 -->
-          <div class="course-card">
-            <img
-              src="https://fptsoftware.com/-/media/project/fpt-software/global/iba-award.png?modified=20240828041748/100x40"
-              alt="Another Course"
-            />
-            <div class="menu-icon">⋮</div>
-            <div class="course-content">
-              <h3>FPT_Software Engineering Basics 2024</h3>
-              <div class="divider"></div>
-              <div class="progress-container">
-                <div class="progress">50% complete</div>
-                <div class="rating">
-                  <span>⭐⭐⭐☆☆</span>
-                </div>
-              </div>
-              <div class="rating-text">Your rating</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Learning Tools Section -->
-      <div id="learning-tools" class="section">
-        <div class="learning-tools">
-          <h2>Learning tools</h2>
-          <p>
-            Explore a diverse range of courses and take advantage of these
-            versatile tools to gain knowledge, skills, and confidence at your
-            own pace.
-          </p>
-
-          <div class="tool-cards">
-  <!-- Tool Card 1 -->
-  <div class="tool-card">
-    <i class="fa-regular fa-clock fa-3x"></i>
-    <div class="tool-content">
-      <h3>Learning reminders</h3>
-      <p>
-        Set time aside to learn and get reminders using your
-        scheduler.
-      </p>
-      <p>You currently have no ongoing reminders.</p>
-      <a href="#">See more</a>
     </div>
   </div>
-</div>
-
-            <!-- Tool Card 2 -->
-            <div class="tool-card">
-              <i class="fa-solid fa-user-clock fa-3x"></i>
-              <div class="tool-content">
-                <h3>Reflections <span class="beta-badge">Beta</span></h3>
-                <p>Take time to reflect to strengthen your learning.</p>
-                <p>
-                  You have currently no recorded reflections on your learning
-                  journey.
-                </p>
+  
+              <!-- Tool Card 2 -->
+              <div class="tool-card">
+                <i class="fa-solid fa-user-clock fa-3x"></i>
+                <div class="tool-content">
+                  <h3>Reflections <span class="beta-badge">Beta</span></h3>
+                  <p>Take time to reflect to strengthen your learning.</p>
+                  <p>
+                    You have currently no recorded reflections on your learning
+                    journey.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-   <script src="script/lab5.js"></script>
-    </script>
+  
+     <script src="script/lab5.js"></script>
+      </script>
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
-        <div class="footer-group-info">
+        <div>
           <h3>Web cá nhân</h3>
           <p>
-            Nong Lam University - Ho Chi Minh City
+            Hồ Chí Minh Nông Lâm University<br />Thủ Đức City, Hồ Chí Minh City,
+            Việt Nam
           </p>
           <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
         </div>
-        <div class="footer-links">
+        <div>
           <h4>Useful Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About </a></li>
-            <li><a href="lab.html">Lab</a></li>
+            <li><a href="lab1.html">Lab</a></li>
           </ul>
         </div>
-
-        <div class="footer-members">
+        <div>
           <h4>Our Members</h4>
           <ul>
             <li>
@@ -274,8 +315,7 @@
             </li>
           </ul>
         </div>
-
-        <div class="footer-newsletter">
+        <div>
           <h4>Newsletter</h4>
           <form>
             <input type="email" placeholder="Email is here" required />
@@ -284,8 +324,9 @@
         </div>
       </div>
     </footer>
-  </body>
-</html>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,19 +1,9 @@
-/* Cài đặt chung */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f8fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
 /* Căn chỉnh chung */
 .container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
   gap: 20px;
 }
 
@@ -95,59 +85,19 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.score-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #2d3748;
+/* Căn chỉnh biểu đồ */
+canvas {
+  max-width: 100%; /* Đảm bảo biểu đồ co giãn phù hợp với không gian */
+  height: 300px; /* Đảm bảo chiều cao biểu đồ */
 }
 
-.score {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333;
-  margin: 0;
-}
-
-.score-chart {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.score-chart img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.score-details {
-  font-size: 14px;
-  color: #555;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.answers-section {
+/* Cải thiện bố cục */
+.left-column,
+.right-column {
   margin-top: 20px;
 }
 
-.question {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f7f8fa;
-  transition: border-left 0.3s ease;
-}
-
-.question.correct {
-  border-left: 5px solid #48bb78;
-}
-
-.question.incorrect {
-  border-left: 5px solid #f56565;
-}
-canvas {
-  max-width: 600px;
-  margin: auto;
+/* Đảm bảo không gian giữa các phần */
+.container > div {
+  padding: 20px;
 }

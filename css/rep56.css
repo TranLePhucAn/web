@@ -1,7 +1,10 @@
 #lab6-dropdown {
-  list-style: none;
-  margin: 0;
+  list-style-type: none;
   padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 #lab6-dropdown li {
@@ -55,11 +58,13 @@
   height: auto;
 }
 
+/* Styling for tooltip */
 .tooltip {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 10px;
-  left: 145%;
+  left: 100%;
   transform: translateX(-50%);
   width: 220px;
   padding: 15px;
@@ -67,13 +72,14 @@
   border: 1px solid #ccc;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .course-card:hover .tooltip {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
-
-.tooltip .add-to-cart {
+.add-to-cart {
   background-color: #4caf50;
   color: white;
   padding: 10px 20px;
@@ -85,7 +91,14 @@
   text-align: center;
 }
 
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+/* Styling for bestseller tag */
 .bestseller {
   color: red;
   font-weight: bold;
+  margin-top: 5px;
+  display: block;
 }

@@ -1,12 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.navbar {
+.navba {
   background-color: #111827;
   padding: 20px;
   color: #fff;
@@ -15,12 +7,12 @@ body {
   align-items: center;
 }
 
-.navbar .logo {
+.navba .logo {
   font-size: 24px;
   font-weight: bold;
 }
 
-.navbar .nav-links a {
+.navba .nav-links a {
   color: #fff;
   margin-left: 20px;
   text-decoration: none;
@@ -28,7 +20,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
+.navba .nav-links a:hover {
   color: #38bdf8;
 }
 

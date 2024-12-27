@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #254b44; /* Màu nền thanh menu và footer */
+  --primary-color: #343664; /* Màu nền thanh menu và footer */
   --text-color: #ffffff; /* Màu chữ trắng */
-  --highlight-color: #ffd700; /* Vàng ánh kim */
-  --secondary-bg: #e3fcec; /* Nền phụ xanh nhạt */
+  --highlight-color: #a75e2a; /* Vàng ánh kim */
+  --secondary-bg: #3e597d; /* Nền phụ xanh nhạt */
   --link-hover-color: #ffd700; /* Màu hover link */
-  --footer-bg: #3e7066; /* Nền footer bổ sung */
+  --footer-bg: #343664; /* Nền footer bổ sung */
   --border-color: #a1b09d; /* Đường viền nhấn nhá */
 }
 
@@ -21,7 +21,9 @@
   z-index: 1000; /* Đảm bảo thanh menu luôn trên cùng */
   box-shadow: 0 2px 5px rgba(232, 237, 225, 0.1); /* Tạo bóng nhẹ cho thanh menu */
 }
-
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* Màu trắng */
+}
 .navbar a {
   color: var(--text-color); /* Màu chữ trắng */
   text-decoration: none;
@@ -45,15 +47,14 @@
 }
 /* Hiệu ứng cho các mục dropdown */
 .dropdown-menu {
-  left: 20px; /* Dời toàn bộ menu con vào trong */
+  left: -20px; /* Dời toàn bộ menu con vào trong */
 }
 
 .dropdown-menu {
   display: none; /* Mặc định ẩn */
   position: absolute;
-  top: 90%;
-  left: 0;
-  background-color: rgb(153, 236, 53);
+  top: 130%;
+  background-color: var(--highlight-color);
   border: 1px solid #ddd;
   z-index: 1000;
   padding: 0;
@@ -82,13 +83,13 @@
 /* --- Breadcrumb --- */
 .breadcrumb {
   background-color: var(--secondary-bg); /* Nền xanh nhạt cho breadcrumb */
-  margin-top: 35px; /* Khoảng cách từ thanh menu cố định */
+  margin-top: 30px; /* Khoảng cách từ thanh menu cố định */
+  margin-bottom: 0; /* Không có khoảng cách phía dưới */
   font-size: 14px; /* Giảm kích thước chữ của breadcrumb */
-  padding: 10px 0; /* Giảm padding để làm phần breadcrumb nhỏ lại */
 }
 
 .breadcrumb .breadcrumb-item a {
-  color: var(--primary-color); /* Màu chữ breadcrumb */
+  color: #f5f5f5; /* Màu chữ breadcrumb */
   font-size: 14px; /* Kích thước chữ cho các mục trong breadcrumb */
 }
 
@@ -97,16 +98,13 @@
 }
 
 /* Cải thiện không gian cho breadcrumb */
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 /* --- Hình Slide --- */
 .slide img {
+  margin-top: 0;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .about-content {
   text-align: center; /* Căn giữa nội dung văn bản */
@@ -195,7 +193,7 @@ footer {
 /* --- Đường viền nhấn nhá --- */
 .navbar,
 footer {
-  border-bottom: 2px solid var(--border-color); /* Đường viền dưới thanh menu và footer */
+  border-bottom: 2px solid; /* Đường viền dưới thanh menu và footer */
 }
 
 /* --- Nội dung chính --- */

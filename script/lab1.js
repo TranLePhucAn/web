@@ -18,8 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
           <strong>Ngày tạo:</strong> ${course.createdAt}<br>
           <strong>Cập nhật lần cuối:</strong> ${course.updatedAt}<br>
         </p>
+        <button class="btn btn-danger btn-sm delete-single-course">Xóa khóa học</button>
       </div>
     `;
+
+    // Add delete event for this course card
+    courseCard
+      .querySelector(".delete-single-course")
+      .addEventListener("click", () => {
+        courseListContainer.removeChild(courseCard);
+      });
+
     courseListContainer.appendChild(courseCard);
   };
 
@@ -27,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     courseForm.reset();
     document.getElementById("created_at").value = "Tự động sinh";
     document.getElementById("updated_at").value = "Tự động cập nhật";
+  };
+
+  const clearAllCourses = () => {
+    courseListContainer.innerHTML = "";
   };
 
   courseForm.addEventListener("submit", (e) => {
@@ -56,9 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resetForm();
   });
 
-  document.querySelector(".delete-btn").addEventListener("click", () => {
-    if (confirm("Bạn có chắc muốn xóa các thông tin trên biểu mẫu?")) {
-      resetForm();
-    }
-  });
+  // Add event listener to delete all courses button
+  const deleteAllButton = document.querySelector(".delete-btn");
+  if (deleteAllButton) {
+    deleteAllButton.addEventListener("click", () => {
+      if (confirm("Bạn có chắc muốn xóa tất cả các khóa học đã lưu?")) {
+        clearAllCourses();
+      }
+    });
+  }
 });
